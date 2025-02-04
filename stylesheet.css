@@ -1,0 +1,122 @@
+
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 5px;
+}
+
+.game-container {
+    background: white;
+    padding: 100px;
+    border-radius: 100px;
+    box-shadow: 0 0 60px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    margin: auto;
+}
+
+#colorBox {
+    width: 120px;
+    height: 120px;
+    margin: 20px auto;
+    border: 2px solid #463a3a;
+}
+
+.options {
+    display: grid;
+    grid-template-columns: repeat(3, 1.5fr);
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.color-btn {
+    width: 80px;
+    height: 80px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.9s;
+    border-radius: 15px;
+}
+
+.color-btn:hover {
+    transform: scale(1.3);
+}
+
+#newGameButton {
+    padding: 10px 15px;
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#newGameButton:hover {
+    background: #0056b3;
+}
+
+#gameStatus {
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* Animation for wrong guess */
+.wrong {
+    animation: shake 0.8s;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+}
+
+/* Animation for correct guess */
+.correct {
+    animation: fadeOut 0.7s ease-out;
+}
+
+@keyframes fadeOut {
+    from { opacity: 1.1; }
+    to { opacity: 0; }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .game-container {
+        padding: 15px;
+    }
+
+    #colorBox {
+        width: 80px;
+        height: 80px;
+    }
+
+    .color-btn {
+        width: 60px;
+        height: 60px;
+    }
+
+    .options {
+        grid-template-columns: repeat(2, 1fr); /* Stack 2 per row on small screens */
+    }
+
+    #newGameButton {
+        width: 100%;
+        padding: 12px;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+    .game-container {
+        max-width: 500px;
+    }
+
+    .color-btn {
+        width: 70px;
+        height: 70px;
+    }
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Guessing Game</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Color Guessing Game</h1>
+        <p data-testid="gameInstructions"> Instructions: try to guess the correct color🚀</p>
+        <div id="colorBox" data-testid="colorBox"></div>
+        <div class="options">
+            <button class="color-btn" data-testid="colorOption"></button>
+            <button class="color-btn" data-testid="colorOption"></button>
+            <button class="color-btn" data-testid="colorOption"></button>
+            <button class="color-btn" data-testid="colorOption"></button>
+            <button class="color-btn" data-testid="colorOption"></button>
+            <button class="color-btn" data-testid="colorOption"></button>
+        </div>
+        <p id="gameStatus" data-testid="gameStatus"></p>
+        <p>Score: <span id="score" data-testid="score">0</span></p>
+        <button id="newGameButton" data-testid="newGameButton">New Game</button>
+    </div>
+    <script src="gamebox.hng.js"></script>
+</body>
+</html>
